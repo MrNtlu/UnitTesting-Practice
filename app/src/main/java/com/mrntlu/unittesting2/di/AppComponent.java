@@ -1,15 +1,14 @@
 package com.mrntlu.unittesting2.di;
 
 import android.app.Application;
-
 import com.mrntlu.unittesting2.BaseApplication;
-import com.mrntlu.unittesting2.viewmodels.ViewModelProviderFactory;
-
+import javax.inject.Singleton;
 import dagger.BindsInstance;
 import dagger.Component;
 import dagger.android.AndroidInjectionModule;
 import dagger.android.AndroidInjector;
 
+@Singleton
 @Component(
         modules = {
                 AndroidInjectionModule.class,
