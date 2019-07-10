@@ -1,8 +1,10 @@
 package com.mrntlu.unittesting2.di;
 
+import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.mrntlu.unittesting2.ui.note.NoteViewModel;
+import com.mrntlu.unittesting2.ui.noteslist.NotesListViewModel;
 import com.mrntlu.unittesting2.viewmodels.ViewModelProviderFactory;
 
 import dagger.Binds;
@@ -18,6 +20,10 @@ public abstract class ViewModelFactoryModule {
     @Binds
     @IntoMap
     @ViewModelKey(NoteViewModel.class)
-    public abstract NoteViewModel bindNoteViewModel(NoteViewModel noteViewModel);
+    public abstract ViewModel bindNoteViewModel(NoteViewModel noteViewModel);
 
+    @Binds
+    @IntoMap
+    @ViewModelKey(NotesListViewModel.class)
+    public abstract ViewModel bindNotesListViewModel(NotesListViewModel noteViewModel);
 }
